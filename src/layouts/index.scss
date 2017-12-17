@@ -7,6 +7,9 @@ http://www.Mkrtchyan.zz.mu
   margin: 0;
   padding: 0;
 }
+li {
+  list-style: none;
+}
 header {
   background-color:rgba(33, 33, 33, 0.9);
   color:#ffffff;
@@ -15,19 +18,18 @@ header {
   position:relative;
   z-index:5;
 
+  .header-container {
+    padding: 11px;
+  }
+
   h1 {
     display: inline-block;
   }
 
-  ul {
+  span.fa-bars {
     float: right;
-    margin-top: 0.6em;
-
-    li {
-      list-style-type: none;
-      float: left;
-      margin-left: 11px;
-    }
+    margin-top: 2px;
+    padding: 11px;
   }
 }
 h1 {
@@ -50,99 +52,48 @@ header a, a:visited {
   text-decoration:none;
   color:#fcfcfc;
 }
+.mega-drop-down {
+  font: 16px/1.3 Helvetica,sans-serif;
+  
+  position: relative;
 
-@keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-  from {background-position:0 0;}
-  to {background-position:-10000px 5000px;}
-}
+  li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
 
-@keyframes move-clouds-back {
-  from {background-position:0 0;}
-  to {background-position:10000px 0;}
-}
-@-webkit-keyframes move-clouds-back {
-  from {background-position:0 0;}
-  to {background-position:10000px 0;}
-}
-@-moz-keyframes move-clouds-back {
-  from {background-position:0 0;}
-  to {background-position:10000px 0;}
-}
-@-ms-keyframes move-clouds-back {
-  from {background-position: 0;}
-  to {background-position:10000px 0;}
-}
+  
+  
 
-.stars, .twinkling, .clouds {
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-width:100%;
-height:100%;
-display:block;
-}
+  .mega-drop-down-container {
+    position: absolute;
+    right: 11px;
+    background-color: #444444;
+    opacity: 0.95;
+    max-width: 100%;
+    width: 300px;
 
-.stars {
-background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-z-index:-10;
-}
+    @media screen and (max-width: 700px) {
+      right: 0;
+    }
 
-.twinkling{
-background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-z-index:7;
+    ul {
+      padding: 0 22px;
 
--moz-animation:move-twink-back 200s linear infinite;
--ms-animation:move-twink-back 200s linear infinite;
--o-animation:move-twink-back 200s linear infinite;
--webkit-animation:move-twink-back 200s linear infinite;
-animation:move-twink-back 200s linear infinite;
-}
-
-.clouds{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-  z-index:10;
-
--moz-animation:move-clouds-back 200s linear infinite;
--ms-animation:move-clouds-back 200s linear infinite;
--o-animation:move-clouds-back 200s linear infinite;
--webkit-animation:move-clouds-back 200s linear infinite;
-animation:move-clouds-back 200s linear infinite;
-}
-
-
-
-
-
-.Aligner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Aligner-item {
-  max-width: 50%;
-}
-
-.Aligner-item--top {
-  align-self: flex-start;
-}
-
-.Aligner-item--bottom {
-  align-self: flex-end;
+      a {
+        color: #f0f0f0;
+        display: block;
+        padding: 11px;
+        text-align: right;
+        text-decoration: none;
+        &:hover {
+          color: #e33;
+        }
+      }
+    }
+  }
 }
 
 .container {
@@ -153,10 +104,29 @@ animation:move-clouds-back 200s linear infinite;
     width: 100%;
     float: none;
   }
+
+  .container-inner {
+    padding: 44px 11px;
+
+    br + img {
+      padding: 44px 0;
+    }
+  }
 }
 body {
-  background-color: #f0f0f0;
+  background-color: #c5c5c5;
 }
+
+img {
+  margin: 0 auto;
+  max-width: 700px;
+  display: block;
+
+  @media screen and (max-width: 700px) {
+    max-width: 100%;
+  }
+}
+
 .root {
   font: 16px/1.3 Helvetica,sans-serif;
   .post-body {

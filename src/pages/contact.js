@@ -1,13 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const IndexPage = () => (
+const ContactPage = () => (
 
-  <div className="container-inner">
-    My name is Tyler Rasmussen and I like cool stuff!
+  <div style={{
+      fontFamily: 'Montserrat, sans-serif',
+    }}>
+    Contact Tyler Rasmussen
     <br/>
     <img src="/static\images\japan_trip\20160328_092633_HDR - Copy.jpg"/>
   </div>
 )
 
-export default IndexPage
+export default ContactPage 
