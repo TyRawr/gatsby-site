@@ -3,23 +3,18 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+import './index.scss'
 
 const Header = () => (
-  <div
+  <header
     style={{
+      font: 'Helvetica',
       background: 'hsla(0, 0%, 0%, .8);',
-      marginBottom: '1.45rem',
     }}
+    className='test'
   >
-    <div
-      style={{
-        margin: '0 auto', 
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+    <nav className='container'>
+      <h1>
         <Link
           to="/"
           style={{
@@ -30,8 +25,12 @@ const Header = () => (
           TYrawr
         </Link>
       </h1>
-    </div>
-  </div>
+      <ul>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
 )
 
 const TemplateWrapper = ({ children }) => (
@@ -44,14 +43,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className='container root'>
       {children()}
     </div>
   </div>

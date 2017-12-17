@@ -1,0 +1,41 @@
+Gatsby Notes
+
+Takes about a min to boot::
+:::LOG
+$ gatsby develop
+success delete html files from previous builds — 0.009 s
+success open and validate gatsby-config.js — 0.005 s
+success copy gatsby files — 0.394 s
+success onPreBootstrap — 0.005 s
+success source and transform nodes — 0.032 s
+success building schema — 0.455 s
+success createLayouts — 0.387 s
+success createPages — 0.035 s
+success createPagesStatefully — 0.011 s
+success onPreExtractQueries — 0.000 s
+success update schema — 0.034 s
+success extract queries from components — 0.322 s
+success run graphql queries — 0.072 s
+success write out page data — 0.006 s
+success write out redirect data — 0.001 s
+success onPostBootstrap — 0.001 s
+
+info bootstrap finished - 40.965 s
+
+ DONE  Compiled successfully in 18778ms20:23:59
+
+
+You can now view gatsby-starter-default in the browser.
+
+  http://localhost:8000/
+
+Note that the development build is not optimized.
+To create a production build, use gatsby build
+
+ WAIT  Compiling...20:23:59
+
+ DONE  Compiled successfully in 217ms20:23:59
+:::/LOG
+
+
+How do you determine which technology development platform is the best? Trial and error?
